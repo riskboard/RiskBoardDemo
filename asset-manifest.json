@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.5757067f.chunk.css",
-  "main.js": "/static/js/main.e1a95e2b.chunk.js",
-  "main.js.map": "/static/js/main.e1a95e2b.chunk.js.map",
-  "static/css/1.94c7f803.chunk.css": "/static/css/1.94c7f803.chunk.css",
-  "static/js/1.5db2f811.chunk.js": "/static/js/1.5db2f811.chunk.js",
-  "static/js/1.5db2f811.chunk.js.map": "/static/js/1.5db2f811.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/1.94c7f803.chunk.css.map": "/static/css/1.94c7f803.chunk.css.map",
-  "static/css/main.5757067f.chunk.css.map": "/static/css/main.5757067f.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.20cbd97492605201866b6db7a411b04f.js": "/precache-manifest.20cbd97492605201866b6db7a411b04f.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/RiskBoardDemo/static/css/main.5757067f.chunk.css",
+  "main.js": "/RiskBoardDemo/static/js/main.f7f07baf.chunk.js",
+  "main.js.map": "/RiskBoardDemo/static/js/main.f7f07baf.chunk.js.map",
+  "static/css/1.94c7f803.chunk.css": "/RiskBoardDemo/static/css/1.94c7f803.chunk.css",
+  "static/js/1.50b4a770.chunk.js": "/RiskBoardDemo/static/js/1.50b4a770.chunk.js",
+  "static/js/1.50b4a770.chunk.js.map": "/RiskBoardDemo/static/js/1.50b4a770.chunk.js.map",
+  "runtime~main.js": "/RiskBoardDemo/static/js/runtime~main.6e9f70d1.js",
+  "runtime~main.js.map": "/RiskBoardDemo/static/js/runtime~main.6e9f70d1.js.map",
+  "static/css/1.94c7f803.chunk.css.map": "/RiskBoardDemo/static/css/1.94c7f803.chunk.css.map",
+  "static/css/main.5757067f.chunk.css.map": "/RiskBoardDemo/static/css/main.5757067f.chunk.css.map",
+  "index.html": "/RiskBoardDemo/index.html",
+  "precache-manifest.c63a462bf49fcbac683c69cc99ffaf48.js": "/RiskBoardDemo/precache-manifest.c63a462bf49fcbac683c69cc99ffaf48.js",
+  "service-worker.js": "/RiskBoardDemo/service-worker.js"
 }
