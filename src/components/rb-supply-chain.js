@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import '../styles/rb-supply-chain.scss';
 
+/**
+supplyChainData = [
+  {
+    location:[{
+        locationName: "Location",
+        coordinates: { lat: 0, long: 0 }
+      },..
+    ]
+    assets: "Asset Name",
+    value: "int",
+    description: "description text",
+  } ...
+];
+**/
+
 class RBSupplyChain extends Component {
   render() {
     return (

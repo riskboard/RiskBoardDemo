@@ -1,0 +1,74 @@
+{
+  "assets": [
+    {
+      "assetName": "Apparel Factory",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Colomobo",
+          "coordinates":[
+            { "latitude": 6.927079, "longitude": 79.861244 }
+          ]
+        }
+      ],
+      "value": 1000000,
+      "description": "Norm Corp sources $1000000 of apparel each year from Apparel Factory."
+    },
+    {
+      "assetName": "Shrimp Farms",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Bande Aceh",
+          "coordinates":[
+            { "latitude": 5.441706, "longitude": 95.316676 }
+          ]
+        }
+      ],
+      "value": 500000,
+      "description": "Norm Corp sources $500000 of apparel each year from the Shrimp farms of Bande Aceh."
+    },
+    {
+      "assetName": "Iron Ore Mine",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Zamboanga City",
+          "coordinates":[
+            { "latitude": 7.022953, "longitude": 122.131841 }
+          ]
+        }
+      ],
+      "value": 2000000,
+      "description": "Norm Corp sources $2000000 of iron ore each year from the iron mine in Zamboonga City."
+    },
+    {
+      "assetName": "Shrimp Farms",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Vung Tau",
+          "coordinates":[
+            { "latitude": 10.438267, "longitude": 107.085766 }
+          ]
+        }
+      ],
+      "value": 2000000,
+      "description": "Norm Corp sources $2000000 of shrimp each year from shrimp farms in Vung Tau."
+    },
+    {
+      "assetName": "Fish",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Bangkok",
+          "coordinates":[
+            { "latitude": 13.756331, "longitude": 100.501762 }
+          ]
+        }
+      ],
+      "value": 1000000,
+      "description": "Norm Corp sources $1000000 of fish each year from Bangkok."
+    }
+  ]
+}
