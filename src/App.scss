@@ -1,12 +1,18 @@
 .RBApp {
+  font-family: "Source Sans Pro";
+  
+  .rb-capitalize {
+  	text-transform: capitalize;
+  }
+  
   h1.rb-title {
     color: #B22E2C;
     text-align: center;
   }
 
  .rb-map {
- 	.rb-marker-text {
- 		font-size: 10px;
- 	}
- }
+    .rb-marker-text {
+   	  font-size: 10px;
+   	}
+  }
 }

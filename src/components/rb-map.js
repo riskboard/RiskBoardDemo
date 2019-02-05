@@ -9,9 +9,9 @@ export default class RBMap extends Component {
     viewport: {
       width: '100%',
       height: 400,
-      latitude: 14.271625,
-      longitude: 100.3676,
-      zoom: 3
+      latitude: 13.5605834,
+      longitude: 19.927948,
+      zoom: 1.56
     }
   };
 
@@ -54,6 +54,7 @@ export default class RBMap extends Component {
       <div className="rb-map">
         <ReactMapGL
           {...this.state.viewport}
+          scrollZoom={false}
           onViewportChange={(viewport) => this.setState({viewport})}
         >
           {

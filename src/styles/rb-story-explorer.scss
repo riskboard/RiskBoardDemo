@@ -1,7 +1,14 @@
 .rb-story-explorer-wrapper {
-  background: #DFDFDF;
-  height: 400px;
   h1 {
     text-align: center;
+  }
+  .rb-story-list {
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 1em;
+        line-height: 1.4;
+      }
+    }
   }
 }

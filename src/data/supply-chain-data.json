@@ -1,74 +1,102 @@
 {
   "assets": [
     {
-      "assetName": "Apparel Factory",
+      "assetName": "Vegetables",
       "isCompanyOwned": false,
       "location": [
         {
-          "locationName": "Colomobo",
+          "locationName": "Nairobi",
           "coordinates":[
-            { "latitude": 6.927079, "longitude": 79.861244 }
+            { "latitude": -1.28333, "longitude": 36.81667 }
           ]
         }
       ],
       "value": 1000000,
-      "description": "Norm Corp sources $1000000 of apparel each year from Apparel Factory."
+      "description": "Norm Corp sources $1000000 of vegetabels each year from Nairobi."
     },
     {
-      "assetName": "Shrimp Farms",
+      "assetName": "Peas",
       "isCompanyOwned": false,
       "location": [
         {
-          "locationName": "Bande Aceh",
+          "locationName": "Guatamala City",
           "coordinates":[
-            { "latitude": 5.441706, "longitude": 95.316676 }
+            { "latitude": 14.628434, "longitude": -90.522713 }
           ]
         }
       ],
       "value": 500000,
-      "description": "Norm Corp sources $500000 of apparel each year from the Shrimp farms of Bande Aceh."
+      "description": "Norm Corp sources $500000 of apparel each year from the Peas from Guatamala."
     },
     {
-      "assetName": "Iron Ore Mine",
+      "assetName": "Rice and Seafood",
       "isCompanyOwned": false,
       "location": [
         {
-          "locationName": "Zamboanga City",
+          "locationName": "Thailand",
           "coordinates":[
-            { "latitude": 7.022953, "longitude": 122.131841 }
+            { "latitude": 13.736717, "longitude": 100.524186 }
           ]
         }
       ],
       "value": 2000000,
-      "description": "Norm Corp sources $2000000 of iron ore each year from the iron mine in Zamboonga City."
+      "description": "Norm Corp sources $2000000 of rice and seafood each year from Bangkok."
     },
     {
-      "assetName": "Shrimp Farms",
+      "assetName": "Rice and Seafood",
       "isCompanyOwned": false,
       "location": [
         {
-          "locationName": "Vung Tau",
+          "locationName": "Chonburi",
           "coordinates":[
-            { "latitude": 10.438267, "longitude": 107.085766 }
+            { "latitude": 13.361143, "longitude": 100.984673 }
           ]
         }
       ],
       "value": 2000000,
-      "description": "Norm Corp sources $2000000 of shrimp each year from shrimp farms in Vung Tau."
+      "description": "Norm Corp sources $2000000 of rice and seafood Chonburi."
     },
     {
-      "assetName": "Fish",
+      "assetName": "Hot Sauce",
       "isCompanyOwned": false,
       "location": [
         {
-          "locationName": "Bangkok",
+          "locationName": "Ho Chi Minh",
           "coordinates":[
-            { "latitude": 13.756331, "longitude": 100.501762 }
+            { "latitude": 10.762622, "longitude": 106.660172 }
           ]
         }
       ],
       "value": 1000000,
-      "description": "Norm Corp sources $1000000 of fish each year from Bangkok."
+      "description": "Norm Corp sources hot sauce from Ho Chi Minh."
+    },
+    {
+      "assetName": "Sweets",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Samsun",
+          "coordinates":[
+            { "latitude": 41.28667, "longitude": 36.33 }
+          ]
+        }
+      ],
+      "value": 1000000,
+      "description": "Norm Corp sources sweets from Samsun."
+    },
+    {
+      "assetName": "Sauces",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Senai",
+          "coordinates":[
+            { "latitude": -15.787996858, "longitude": -47.873663172 }
+          ]
+        }
+      ],
+      "value": 1000000,
+      "description": "Norm Corp sources sauces from Senai."
     }
   ]
 }

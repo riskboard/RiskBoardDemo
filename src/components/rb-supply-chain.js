@@ -18,14 +18,30 @@ supplyChainData = [
 
 class RBSupplyChain extends Component {
   render() {
+    const {assets} = this.props;
     return (
       <div className="rb-supply-chain-wrapper">
         <div className="rb-supply-list">
           <h1>Supply Chain</h1>
+          <ul>
+            {assets.map((asset, i) => {
+              const assetName = asset.assetName;
+              const locationName = asset.location[0].locationName;
+              return (
+                <li key={i}>
+                  <i className="fas fa-caret-right rb-list-icon"></i>
+                  {`${locationName} - ${assetName}`}
+                </li>);
+            })}
+          </ul>
         </div>
       </div>
     );
   }
 }
+
+RBSupplyChain.defaultProps = {
+  assets: []
+};
 
 export default RBSupplyChain;

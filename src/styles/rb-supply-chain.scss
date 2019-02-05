@@ -1,7 +1,15 @@
 .rb-supply-chain-wrapper {
-  background: #DFDFDF;
-  height: 400px;
   h1 {
     text-align: center;
+  }
+  ul {
+  	list-style: none;
+  	li {
+  		margin-bottom: 1em;
+  	}
+  }
+  .rb-list-icon {
+  	margin-right: 0.5em;
+  	display: inline-block;
   }
 }
