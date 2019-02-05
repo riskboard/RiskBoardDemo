@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/RiskBoardDemo/static/css/1.2657a150.chunk.css"
   },
   {
-    "revision": "e60dcbd6e6b6f59d50365eb00033d6ed",
+    "revision": "f358416961f1aa8e3c26985a2223e1ac",
     "url": "/RiskBoardDemo/index.html"
   }
 ];
