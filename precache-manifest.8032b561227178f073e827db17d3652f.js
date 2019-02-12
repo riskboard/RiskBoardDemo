@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/RiskBoardDemo/static/js/runtime~main.6e9f70d1.js"
   },
   {
-    "revision": "064483725a2ad115552b",
-    "url": "/RiskBoardDemo/static/js/main.06448372.chunk.js"
+    "revision": "e910b0ccaeef5d9a211e",
+    "url": "/RiskBoardDemo/static/js/main.e910b0cc.chunk.js"
   },
   {
     "revision": "c8c6826b97fadca9dd42",
     "url": "/RiskBoardDemo/static/js/1.c8c6826b.chunk.js"
   },
   {
-    "revision": "064483725a2ad115552b",
+    "revision": "e910b0ccaeef5d9a211e",
     "url": "/RiskBoardDemo/static/css/main.4b87b5a5.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/RiskBoardDemo/static/css/1.5768f5a3.chunk.css"
   },
   {
-    "revision": "9c7517cccc3d4ef83edd05e031869298",
+    "revision": "f1cc08f6f34b606fb01569f7db50e2d0",
     "url": "/RiskBoardDemo/index.html"
   }
 ];
