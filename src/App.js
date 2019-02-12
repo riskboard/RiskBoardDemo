@@ -17,7 +17,7 @@ const stories = transformStoryData(storiesData);
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/RiskBoardDemo">
         <div className="RBApp rb-container">
           <RBHeader />
           <Grid fluid>

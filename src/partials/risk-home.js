@@ -14,10 +14,10 @@ class RiskHome extends Component {
         <RBMap assets={assets}/>
         <Grid fluid>
           <Row>
-            <Col lg={4}>
+            <Col lg={4} className="rb-section-col">
               <RBSupplyChain assets={assets} />
             </Col>
-            <Col lg={8}>
+            <Col lg={8} className="rb-section-col">
               <RBStoryExplorer stories={stories} />
             </Col>
           </Row>

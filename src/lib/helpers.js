@@ -22,11 +22,10 @@ export function transformStoryData(storyData) {
   const flatStories = [];
   const storyUrls = [];
   Object.keys(stories).forEach((k) => {
-    console.log(k);
     flatten(stories[k]).forEach((story, i) => {
-      const modifiedStory = Object.assign({}, story, {location: k, id: i+1})
+      const shortSummary = `${story.text.slice(0,300)}...`;
+      const modifiedStory = Object.assign({}, story, {location: k, id: i+1, shortSummary });
       if (!storyUrls.includes(story.url)) {
-        console.log(story);
         flatStories.push(modifiedStory);
         storyUrls.push(story.url);
       }
