@@ -43,20 +43,6 @@
       "description": "Norm Corp sources $2000000 of rice and seafood each year from Bangkok."
     },
     {
-      "assetName": "Rice and Seafood",
-      "isCompanyOwned": false,
-      "location": [
-        {
-          "locationName": "Chonburi",
-          "coordinates":[
-            { "latitude": 13.361143, "longitude": 100.984673 }
-          ]
-        }
-      ],
-      "value": 2000000,
-      "description": "Norm Corp sources $2000000 of rice and seafood Chonburi."
-    },
-    {
       "assetName": "Hot Sauce",
       "isCompanyOwned": false,
       "location": [

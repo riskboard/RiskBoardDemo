@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 import '../styles/rb-story-explorer.scss';
 
 class RBStoryExplorer extends Component {
@@ -16,7 +17,7 @@ class RBStoryExplorer extends Component {
     const filteredStories = this.getStorySelection(stories, selectedLocation)
     return filteredStories.map((story, i) => {
       return (
-        <li key={i}><span className="rb-capitalize">{story.location}</span> Story {i + 1}: {story.text}</li>
+        <li key={i}><Link to={`/incidents/${story.id}`}><span className="rb-capitalize">{story.location}</span> Story {i + 1}</Link>: {story.text}</li>
       );
     })
   }
@@ -26,7 +27,7 @@ class RBStoryExplorer extends Component {
     return (
       <div className="rb-story-explorer-wrapper">
         <div className="rb-story-list">
-          <h1>Story List</h1>
+          <h2 className="rb-section-title">Story List</h2>
           <ul>
             {this.renderFilteredStories()}
           </ul>

@@ -1,11 +1,14 @@
 .rb-supply-chain-wrapper {
+  padding: 1em;
+  background: #FFF;
   h1 {
     text-align: center;
   }
   ul {
-  	list-style: none;
+    text-align: left;
   	li {
   		margin-bottom: 1em;
+      font-size: 1.2em;
   	}
   }
   .rb-list-icon {

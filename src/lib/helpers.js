@@ -20,10 +20,16 @@ function flatten(input) {
 export function transformStoryData(storyData) {
   const {stories} = storyData;
   const flatStories = [];
+  const storyUrls = [];
   Object.keys(stories).forEach((k) => {
-    flatten(stories[k]).forEach((story) => {
-      const modifiedStory = Object.assign({}, story, {location: k})
-      flatStories.push(modifiedStory)
+    console.log(k);
+    flatten(stories[k]).forEach((story, i) => {
+      const modifiedStory = Object.assign({}, story, {location: k, id: i+1})
+      if (!storyUrls.includes(story.url)) {
+        console.log(story);
+        flatStories.push(modifiedStory);
+        storyUrls.push(story.url);
+      }
     })
   })
   const sortedFlatStories = 

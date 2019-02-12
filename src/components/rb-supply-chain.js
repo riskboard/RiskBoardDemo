@@ -22,7 +22,7 @@ class RBSupplyChain extends Component {
     return (
       <div className="rb-supply-chain-wrapper">
         <div className="rb-supply-list">
-          <h1>Supply Chain</h1>
+          <h2 className="rb-section-title">Supply Chain</h2>
           <ul>
             {assets.map((asset, i) => {
               const assetName = asset.assetName;
