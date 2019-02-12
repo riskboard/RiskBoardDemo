@@ -21,17 +21,17 @@ export function transformStoryData(storyData) {
   const {stories} = storyData;
   const flatStories = [];
   const storyUrls = [];
-  Object.keys(stories).forEach((k) => {
-    flatten(stories[k]).forEach((story, i) => {
+  Object.keys(stories).forEach((k, i) => {
+    flatten(stories[k]).forEach((story, j) => {
       const shortSummary = `${story.text.slice(0,300)}...`;
-      const modifiedStory = Object.assign({}, story, {location: k, id: i+1, shortSummary });
+      const modifiedStory = Object.assign({}, story, {location: k, id: `${i}${j+1}`, shortSummary });
       if (!storyUrls.includes(story.url)) {
         flatStories.push(modifiedStory);
         storyUrls.push(story.url);
       }
     })
   })
-  const sortedFlatStories = 
+  const sortedFlatStories =
     flatStories.sort((a, b) => {
       if (a.score < b.score) {
         return -1;

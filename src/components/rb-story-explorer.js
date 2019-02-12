@@ -17,7 +17,7 @@ class RBStoryExplorer extends Component {
     const filteredStories = this.getStorySelection(stories, selectedLocation)
     return filteredStories.map((story, i) => {
       return (
-        <li key={i}><Link to={`/incidents/${story.id}`}><span className="rb-capitalize">{story.location}</span> Story {i + 1}</Link>: {story.shortSummary}</li>
+        <li key={i}><Link to={`/incidents?incident=${story.id}`}><span className="rb-capitalize">{story.location}</span> Story {i + 1}</Link>: {story.shortSummary}</li>
       );
     })
   }

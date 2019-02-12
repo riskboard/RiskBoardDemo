@@ -14,7 +14,7 @@
   .rb-capitalize {
   	text-transform: capitalize;
   }
-  
+
   h1.rb-title {
     color: #B22E2C;
     text-align: center;
@@ -40,7 +40,7 @@
   ul.rb-sidebar-menu {
     padding: 3em 10%;
     li {
-      font-size: 1.4em;
+      font-size: 1.5em;
       .fa {
         transition: 0.25s;
         margin-right: 1em;
@@ -74,7 +74,7 @@
 }
 
 .rb-section-title {
-  font-size: 1.4em;
+  font-size: 1.5em;
   text-align: left;
   border-bottom: solid 1px #F2F2F2;
   padding-bottom: 1em;
@@ -83,6 +83,14 @@
 .rb-page-title {
   margin: 0;
   padding: 2em 0 1em;
-  font-size: 1.4em;
+  font-size: 1.5em;
   text-align: left;
+}
+
+.rb-section {
+  margin-bottom: 1em;
+  width: 100%;
+  &.white {
+    background: #FFF;
+  }
 }

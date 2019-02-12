@@ -3,17 +3,19 @@ import ReactMapGL, {Marker} from 'react-map-gl';
 import RBPin from './rb-pin.js';
 import '../styles/rb-map.scss';
 
-export default class RBMap extends Component {
-
-  state = {
-    viewport: {
-      width: '100%',
-      height: 400,
-      latitude: 13.5605834,
-      longitude: 19.927948,
-      zoom: 1.56
-    }
-  };
+class RBMap extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      viewport: {
+        width: '100%',
+        height: 400,
+        latitude: props.latitude,
+        longitude: props.longitude,
+        zoom: props.zoom
+      }
+    };
+  }
 
   getAssetLocationData(asset) {
     // Just grabbing the first location, will have to revisit this
@@ -29,23 +31,47 @@ export default class RBMap extends Component {
     };
   }
 
-  renderAssetsPins(props=this.props) {
-    const {assets} = props;
-    return assets.map((asset, i) => {
-      const markerData = this.getAssetLocationData(asset);
-      const { longitude, latitude, assetName, value } = markerData;
-      return (
-        <Marker key={i} 
-          latitude={latitude} longitude={longitude}
-          offsetTop={-20} offsetLeft={-10}
-          onDragStart={this._onMarkerDragStart}
-          onDrag={this._onMarkerDrag}
-          onDragEnd={this._onMarkerDragEnd}
-        >
+  renderPins(props=this.props) {
+    const {assets, stories} = props;
+    const markers = [];
+    if (assets.length > 0) {
+      const assetMarkers = assets.map((asset, i) => {
+        const markerData = this.getAssetLocationData(asset);
+        const { longitude, latitude, assetName, value } = markerData;
+        return (
+          <Marker
+            key={`a-${i}`}
+            latitude={+latitude} longitude={+longitude}
+            offsetTop={-20} offsetLeft={-10}
+            onDragStart={this._onMarkerDragStart}
+            onDrag={this._onMarkerDrag}
+            onDragEnd={this._onMarkerDragEnd}
+          >
           <RBPin size={20} />
-        </Marker>
-      );
-    })
+          </Marker>
+        );
+      })
+      markers.push(assetMarkers);
+    }
+    if (stories.length > 0) {
+      const storyMarkers = stories.map((story, i) => {
+        const { long, lat } = story;
+        return (
+          <Marker
+            key={`s-${i}`}
+            latitude={+lat} longitude={+long}
+            offsetTop={-20} offsetLeft={-10}
+            onDragStart={this._onMarkerDragStart}
+            onDrag={this._onMarkerDrag}
+            onDragEnd={this._onMarkerDragEnd}
+          >
+            <RBPin size={20} />
+          </Marker>
+        );
+      })
+      markers.push(storyMarkers);
+    }
+    return markers;
   }
 
   render() {
@@ -58,10 +84,20 @@ export default class RBMap extends Component {
           onViewportChange={(viewport) => this.setState({viewport})}
         >
           {
-            this.renderAssetsPins(this.props)
+            this.renderPins(this.props)
           }
         </ReactMapGL>
       </div>
     );
   }
 }
+
+RBMap.defaultProps = {
+  assets: [],
+  stories:[],
+  latitude: 13.5605834,
+  longitude: 19.927948,
+  zoom: 1.56
+};
+
+export default RBMap;
