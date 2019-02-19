@@ -12,13 +12,14 @@ const pinStyle = {
 export default class RBPin extends PureComponent {
 
   render() {
-    const {size = 20} = this.props;
+    const {size = 20, onHover} = this.props;
 
     return (
       <svg
         height={size}
         viewBox="0 0 24 24"
         style={pinStyle}
+        onMouseEnter={onHover}
       >
         <path d={ICON}/>
       </svg>

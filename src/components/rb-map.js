@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import ReactMapGL, {Marker} from 'react-map-gl';
+import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 import RBPin from './rb-pin.js';
+import RBPopup from './rb-popup.js';
 import '../styles/rb-map.scss';
 
 class RBMap extends Component {
@@ -13,7 +14,8 @@ class RBMap extends Component {
         latitude: props.latitude,
         longitude: props.longitude,
         zoom: props.zoom
-      }
+      },
+      popupInfo: null
     };
   }
 
@@ -25,13 +27,14 @@ class RBMap extends Component {
     const {latitude, longitude} = asset.location[0].coordinates[0];
     return {
       assetName,
+      value,
       latitude,
       longitude,
       locationName
     };
   }
 
-  renderPins(props=this.props) {
+  _renderPins(props=this.props) {
     const {assets, stories} = props;
     const markers = [];
     if (assets.length > 0) {
@@ -47,7 +50,20 @@ class RBMap extends Component {
             onDrag={this._onMarkerDrag}
             onDragEnd={this._onMarkerDragEnd}
           >
-          <RBPin size={20} />
+          <RBPin size={20} 
+            onHover={
+              () => this.setState(
+                  { 
+                    popupInfo: {
+                      latitude: +latitude,
+                      longitude:+longitude,
+                      text: assetName,
+                      value
+                    }
+                  }  
+              )
+            } 
+          />
           </Marker>
         );
       })
@@ -65,13 +81,38 @@ class RBMap extends Component {
             onDrag={this._onMarkerDrag}
             onDragEnd={this._onMarkerDragEnd}
           >
-            <RBPin size={20} />
+            <RBPin size={20} onHover={
+              () => this.setState(
+                {
+                  popupInfo: {
+                    latitude: +lat,
+                    longitude:+long,
+                    text: 'story'
+                  }
+                }
+              )
+            } />
           </Marker>
         );
       })
       markers.push(storyMarkers);
     }
     return markers;
+  }
+
+  _renderPopup() {
+    const {popupInfo} = this.state;
+
+    return popupInfo && (
+      <Popup tipSize={5}
+        anchor="top"
+        longitude={popupInfo.longitude}
+        latitude={popupInfo.latitude}
+        closeOnClick={false}
+        onClose={() => this.setState({popupInfo: null})} >
+        <RBPopup {...popupInfo} />
+      </Popup>
+    );
   }
 
   render() {
@@ -83,9 +124,8 @@ class RBMap extends Component {
           scrollZoom={false}
           onViewportChange={(viewport) => this.setState({viewport})}
         >
-          {
-            this.renderPins(this.props)
-          }
+          { this._renderPins(this.props) }
+          { this._renderPopup() }
         </ReactMapGL>
       </div>
     );
