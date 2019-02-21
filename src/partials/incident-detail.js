@@ -39,9 +39,33 @@ class IncidentDetail extends Component {
                 <Row>
                   <div className="rb-section white">
                     <div className="rb-incident-information">
-                      <div className="rb-incident-text"><strong>Summary:</strong> {mainStory.text}</div>
+                      <div className="rb-incident-text"><strong>Summary:</strong><br/>{mainStory.text}</div>
+                    </div>
+                    <div className="rb-past-incident">
+                      <div className="rb-incident-text"><strong>Past Instances:</strong><br/>Thai labor disputes was previously reported on July 25, July 11, and July 5 in local Thai media relating to bonded labor. Those incidences referred to bonded labor. Prior instances of labor abuses in the Thai fishing industry were reported by the Guardian newspaper in the UK.</div>
                     </div>
                   </div>
+                </Row>
+                <Row>
+                  <Col lg={7}>
+                    <div className="rb-risk-box">
+                      <Row>
+                          <Col lg={3}><div className="rb-red-box">High</div></Col>
+                          <Col lg={9}>
+                            <p>Risk of national and international Media:</p>
+                            <p>Such stories have been covered by international media in 2 years</p>
+                          </Col>
+                      </Row>
+                    </div>
+                  </Col>
+                  <Col lg={5}>
+                    <ul className="rb-recent-stories">
+                      <b>Recent Stories</b>
+                      <li><a href="#">25 workers rescued from a camp in Benjina</a></li>
+                      <li><a href="#">25 workers rescued from a camp in Benjina</a></li>
+                      <li><a href="#">25 workers rescued from a camp in Benjina</a></li>
+                    </ul>
+                  </Col>
                 </Row>
               </Grid>
             </div>
