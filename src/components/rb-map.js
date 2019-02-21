@@ -40,7 +40,7 @@ class RBMap extends Component {
     if (assets.length > 0) {
       const assetMarkers = assets.map((asset, i) => {
         const markerData = this.getAssetLocationData(asset);
-        const { longitude, latitude, assetName, value } = markerData;
+        const { longitude, latitude, assetName, value, locationName } = markerData;
         return (
           <Marker
             key={`a-${i}`}
@@ -57,7 +57,7 @@ class RBMap extends Component {
                     popupInfo: {
                       latitude: +latitude,
                       longitude:+longitude,
-                      text: assetName,
+                      text: `${locationName}: ${assetName}`,
                       value
                     }
                   }  
@@ -108,7 +108,7 @@ class RBMap extends Component {
         anchor="top"
         longitude={popupInfo.longitude}
         latitude={popupInfo.latitude}
-        closeOnClick={false}
+        closeOnClick={true}
         onClose={() => this.setState({popupInfo: null})} >
         <RBPopup {...popupInfo} />
       </Popup>

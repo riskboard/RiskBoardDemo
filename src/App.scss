@@ -60,6 +60,10 @@
   }
 }
 
+.mapboxgl-marker {
+  cursor: pointer !important;
+}
+
 .rb-no-margin-col {
   margin: 0;
   padding: 0;
