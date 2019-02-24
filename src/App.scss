@@ -91,6 +91,12 @@
   text-align: left;
 }
 
+.row {
+  &.white {
+    background: #FFF;
+  }
+}
+
 .rb-section {
   margin-bottom: 1em;
   width: 100%;

@@ -44,6 +44,25 @@ export function transformStoryData(storyData) {
   return sortedFlatStories;
 }
 
+export function groupDataByWeekWithNoise(data) {
+  let i = 0;
+  let groupedData = [];
+  data.forEach((datum) => {
+    if (i === 0) {
+      groupedData.push([datum[0], +datum[1]+50]);
+      i++;
+    } else if (i === 6) {
+      groupedData[groupedData.length-1][1] = groupedData[groupedData.length-1][1] + datum[1];
+      i = 0;
+    } else {
+      console.log(groupedData);
+      groupedData[groupedData.length-1][1] = groupedData[groupedData.length-1][1] + datum[1];
+      i++;
+    }
+  })
+  console.log(groupedData);
+  return groupedData;
+}
 
 export function groupDataByWeek(data) {
   let i = 0;
@@ -51,9 +70,8 @@ export function groupDataByWeek(data) {
   data.forEach((datum) => {
     if (i === 0) {
       groupedData.push([datum[0], +datum[1]]);
-      console.log(groupedData);
       i++;
-    } else if (i === 7) {
+    } else if (i === 6) {
       groupedData[groupedData.length-1][1] = groupedData[groupedData.length-1][1] + datum[1];
       i = 0;
     } else {

@@ -28,10 +28,26 @@
 	}
 }
 
-ul.rb-recent-stories {
+ul.rb-related-stories {
 	text-align: left;
 	font-size: 1.2em;
 	li {
 		margin-bottom: 0.5em;
 	}
+}
+
+.rb-index-wrapper {
+	border-right: 1px solid #DDD;
+	padding: 0 1em;
+	&:last-child {
+		border-right: none;
+	}
+}
+.rb-index-value {
+	font-size: 2em;
+	margin-bottom: 0.25em;
+}
+
+.rb-index-name {
+	font-size: 1.2em;
 }

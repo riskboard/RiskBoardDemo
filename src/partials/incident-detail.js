@@ -11,6 +11,7 @@ import queryString from 'query-string';
 const data = THAI_LABOR_COUNTS.results.counts.map((count) => { return [count.date, count.total_count ] });
 const groupedData = groupDataByWeek(data);
 
+
 class IncidentDetail extends Component {
   render() {
     const {location} = this.props;
@@ -30,14 +31,14 @@ class IncidentDetail extends Component {
                     <RBMap longitude={+mainStory.long} latitude={+mainStory.lat} zoom={4} stories={otherStories}/>
                   </div>
                 </Row>
-                <Row>
-                  <div className="rb-section white">
+                <Row className="white">
+                  <div className="rb-section">
                     <h2 className="rb-section-title">Incident Analysis</h2>
                     <RBLineChart data={groupedData} />
                   </div>
                 </Row>
-                <Row>
-                  <div className="rb-section white">
+                <Row className="white">
+                  <div className="rb-section">
                     <div className="rb-incident-information">
                       <div className="rb-incident-text"><strong>Summary:</strong><br/>{mainStory.text}</div>
                     </div>
@@ -46,7 +47,7 @@ class IncidentDetail extends Component {
                     </div>
                   </div>
                 </Row>
-                <Row>
+                <Row className="white">
                   <Col lg={7}>
                     <div className="rb-risk-box">
                       <Row>
@@ -59,11 +60,41 @@ class IncidentDetail extends Component {
                     </div>
                   </Col>
                   <Col lg={5}>
-                    <ul className="rb-recent-stories">
+                    <ul className="rb-related-stories">
                       <b>Recent Stories</b>
                       <li><a href="#">25 workers rescued from a camp in Benjina</a></li>
                       <li><a href="#">25 workers rescued from a camp in Benjina</a></li>
                       <li><a href="#">25 workers rescued from a camp in Benjina</a></li>
+                    </ul>
+                  </Col>
+                </Row>
+                <Row className="white">
+                  <Col lg={7}>
+                    <Row>
+                      <Col lg={3} className="rb-index-wrapper">
+                        <div className="rb-index-value">High Risk</div>
+                        <div className="rb-index-name">Trafficking Index</div>
+                      </Col>
+                      <Col lg={3} className="rb-index-wrapper">
+                        <div className="rb-index-value">101th</div>
+                        <div className="rb-index-name">Corruption Index</div>
+                      </Col>
+                      <Col lg={3} className="rb-index-wrapper">
+                        <div className="rb-index-value">85th</div>
+                        <div className="rb-index-name">Global Rights Index (of 100)</div>
+                      </Col>
+                      <Col lg={3} className="rb-index-wrapper">
+                        <div className="rb-index-value">55th</div>
+                        <div className="rb-index-name">Ease of doing business (of 100)</div>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col lg={5}>
+                    <ul className="rb-related-stories">
+                      <b>Recent Stories</b>
+                      <li><a href="#">Twitter trend in Thailand: #slavery</a></li>
+                      <li><a href="#">15 rescued from shipping vessels</a></li>
+                      <li><a href="#">2018 law prohibits bonded labour</a></li>
                     </ul>
                   </Col>
                 </Row>

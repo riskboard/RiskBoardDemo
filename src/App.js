@@ -26,6 +26,7 @@ class App extends Component {
                       <li><a href="#"><span className="fa fa-home"/>Analytics</a></li>
                       <li><a href="#"><span className="fa fa-users"/>Profile</a></li>
                       <li><a href="#"><span className="fa fa-cog"/>Settings</a></li>
+                      <li><a href="#">Response Records</a></li>
                     </ul>
                   </div>
                 </Col>
