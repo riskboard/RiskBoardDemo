@@ -44,7 +44,7 @@ export function transformStoryData(storyData) {
   return sortedFlatStories;
 }
 
-export function groupDataByWeekWithNoise(data) {
+export function groupDataByWeekNoise(data) {
   let i = 0;
   let groupedData = [];
   data.forEach((datum) => {

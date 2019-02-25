@@ -5,11 +5,22 @@ import RBMap from '../components/rb-map.js';
 import '../styles/rb-incident-detail-page.scss';
 import RBLineChart from '../components/rb-line-chart.js';
 import THAI_LABOR_COUNTS from '../data/thai-labor-counts.json';
-import { groupDataByWeek } from '../lib/helpers.js';
+import THAI_LABOR_US_COUNTS from '../data/thai-labor-us-counts.json';
+import THAI_LABOR_UK_COUNTS from '../data/thai-labor-uk-counts.json';
+import { groupDataByWeek, groupDataByWeekNoise } from '../lib/helpers.js';
 import queryString from 'query-string';
 
-const data = THAI_LABOR_COUNTS.results.counts.map((count) => { return [count.date, count.total_count ] });
-const groupedData = groupDataByWeek(data);
+const thaiData = THAI_LABOR_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
+const usData = THAI_LABOR_US_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
+const ukData = THAI_LABOR_UK_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
+const groupedThaiData = groupDataByWeek(thaiData);
+const groupedUSData = groupDataByWeek(usData);
+const groupedUKData = groupDataByWeek(ukData);
+const chartData = [
+  { name: 'Thai News Stories', data: groupedThaiData },
+  { name: 'US News Stories', data: groupedUSData },
+  { name: 'UK News Stories', data: groupedUKData }
+];
 
 
 class IncidentDetail extends Component {
@@ -34,7 +45,7 @@ class IncidentDetail extends Component {
                 <Row className="white">
                   <div className="rb-section">
                     <h2 className="rb-section-title">Incident Analysis</h2>
-                    <RBLineChart data={groupedData} />
+                    <RBLineChart data={chartData} />
                   </div>
                 </Row>
                 <Row className="white">
