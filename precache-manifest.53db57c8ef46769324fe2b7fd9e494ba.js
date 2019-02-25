@@ -22,5 +22,9 @@ self.__precacheManifest = [
   {
     "revision": "671b4a087def6d515330a62321ff62f8",
     "url": "/RiskBoardDemo/index.html"
+  },
+  {
+    "revision": "c0892f59a369e4925d54a58d745abf0f",
+    "url": "/RiskBoardDemo/incidents/index.html"
   }
 ];
