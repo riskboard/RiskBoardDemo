@@ -13,7 +13,6 @@ export class SharedStoriesProvider extends Component {
   }
 
   getStoryDetail = id => {
-    console.log(id);
     return this.state.stories.filter((story) => { return story.id === id; })[0];
   }
 

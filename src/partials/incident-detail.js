@@ -4,20 +4,20 @@ import { SharedStoriesConsumer } from '../contexts/stories-context.js';
 import RBMap from '../components/rb-map.js';
 import '../styles/rb-incident-detail-page.scss';
 import RBLineChart from '../components/rb-line-chart.js';
-import THAI_LABOR_COUNTS from '../data/thai-labor-counts.json';
-import THAI_LABOR_US_COUNTS from '../data/thai-labor-us-counts.json';
-import THAI_LABOR_UK_COUNTS from '../data/thai-labor-uk-counts.json';
-import { groupDataByWeek, groupDataByWeekNoise } from '../lib/helpers.js';
+import LOCAL_COUNTS from '../data/kerala-drought-india-counts.json';
+import US_COUNTS from '../data/kerala-drought-us-counts.json';
+import UK_COUNTS from '../data/kerala-drought-uk-counts.json';
+import { groupDataByMonth } from '../lib/helpers.js';
 import queryString from 'query-string';
 
-const thaiData = THAI_LABOR_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
-const usData = THAI_LABOR_US_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
-const ukData = THAI_LABOR_UK_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
-const groupedThaiData = groupDataByWeek(thaiData);
-const groupedUSData = groupDataByWeek(usData);
-const groupedUKData = groupDataByWeek(ukData);
+const localData = LOCAL_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
+const usData = US_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
+const ukData = UK_COUNTS.results.counts.map((count) => { return [count.date, count.count ] });
+const groupedLocalData = groupDataByMonth(localData);
+const groupedUSData = groupDataByMonth(usData);
+const groupedUKData = groupDataByMonth(ukData);
 const chartData = [
-  { name: 'Thai News Stories', data: groupedThaiData },
+  { name: 'India News Stories', data: groupedLocalData },
   { name: 'US News Stories', data: groupedUSData },
   { name: 'UK News Stories', data: groupedUKData }
 ];
@@ -57,6 +57,17 @@ class IncidentDetail extends Component {
                       <div className="rb-incident-text"><strong>Past Instances:</strong><br/>Thai labor disputes was previously reported on July 25, July 11, and July 5 in local Thai media relating to bonded labor. Those incidences referred to bonded labor. Prior instances of labor abuses in the Thai fishing industry were reported by the Guardian newspaper in the UK.</div>
                     </div>
                   </div>
+                </Row>
+                <Row className="white">
+                  <div className="rb-section">
+                    <div className="rb-key-actors">
+                      <strong>Key Actors:</strong><br/>
+                      <ul>
+                        <li><a href="#">Thai Union (supplier)</a></li>
+                        <li><a href="#">Tesco</a></li>
+                      </ul>
+                    </div>
+                  </div>  
                 </Row>
                 <Row className="white">
                   <Col lg={7}>

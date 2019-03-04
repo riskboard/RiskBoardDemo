@@ -75,7 +75,24 @@ export function groupDataByWeek(data) {
       groupedData[groupedData.length-1][1] = groupedData[groupedData.length-1][1] + datum[1];
       i = 0;
     } else {
-      console.log(groupedData);
+      groupedData[groupedData.length-1][1] = groupedData[groupedData.length-1][1] + datum[1];
+      i++;
+    }
+  })
+  return groupedData;
+}
+
+export function groupDataByMonth(data) {
+  let i = 0;
+  let groupedData = [];
+  data.forEach((datum) => {
+    if (i === 0) {
+      groupedData.push([datum[0], +datum[1]]);
+      i++;
+    } else if (i === 29) {
+      groupedData[groupedData.length-1][1] = groupedData[groupedData.length-1][1] + datum[1];
+      i = 0;
+    } else {
       groupedData[groupedData.length-1][1] = groupedData[groupedData.length-1][1] + datum[1];
       i++;
     }

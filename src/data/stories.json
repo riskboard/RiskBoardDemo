@@ -1,5 +1,17 @@
 {
   "stories" : {
+    "kerala": [
+        [
+            {
+                "url": "https://www.hindustantimes.com/india-news/after-floods-kerala-now-stares-at-drought-as-temperatures-soar/story-oiBTRw2ddb5l3NgWT1BDQK.html",
+                "text": "After floods, Kerala now stares at drought as temperatures soar. Six months after a devastating flood crippled Kerala, the state is in the grip of a severe drought and experts have warned that heat wave conditions will persist in many areas of north Kerala for more than a month. According to the Kerala Disaster Management Authority, some of the districts like Palakkad, Kozhikkode and Malappuram temperature is likely to go up by 6 degrees above normal. With mercury level soaring, the KSDMA has listed necessary measures for people to follow during the scorching days ahead. Since humidity levels are quite high in the state, the high temperatures will compound woes of people who are exposed to the sun. Experts said vast destruction of green cover during the August floods, difficulty in groundwater recharging due to topsoil removal, El Nino effect and changing construction models are to be blamed for the hike in temperature.",
+                "score": -10000.4751890973437,
+                "lat": 9.9385818, 
+                "long": 76.1803478,
+                "date": "20190304"
+            }
+        ]
+    ],
     "nairobi": [
         [
             {

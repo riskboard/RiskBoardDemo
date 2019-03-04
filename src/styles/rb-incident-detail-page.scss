@@ -51,3 +51,14 @@ ul.rb-related-stories {
 .rb-index-name {
 	font-size: 1.2em;
 }
+
+.rb-key-actors {
+	text-align: left;
+	font-size: 1.4em;
+	ul {
+		li {
+			display: inline-block;
+			margin-right: 1em;
+		}
+	}
+}

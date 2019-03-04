@@ -1,6 +1,20 @@
 {
   "assets": [
     {
+      "assetName": "Cardamom",
+      "isCompanyOwned": false,
+      "location": [
+        {
+          "locationName": "Kerala",
+          "coordinates":[
+            { "latitude": 9.9385818, "longitude": 76.1803478 }
+          ]
+        }
+      ],
+      "value": 1000000,
+      "description": "Norm Corp sources $1000000 of vegetabels each year from Nairobi."
+    },
+    {
       "assetName": "Vegetables",
       "isCompanyOwned": false,
       "location": [
