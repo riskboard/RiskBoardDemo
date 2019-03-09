@@ -48,6 +48,7 @@
     "query-string": "^6.2.0",
     "react": "^16.7.0",
     "react-app-polyfill": "^0.2.0",
+    "react-c3js": "^0.1.20",
     "react-chartkick": "^0.3.0",
     "react-dev-utils": "^7.0.1",
     "react-dom": "^16.7.0",
